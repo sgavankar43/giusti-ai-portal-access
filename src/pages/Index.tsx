@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Scale, MessageCircle, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,7 +31,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
         <h1 className="text-5xl font-bold text-white mb-6">
           Welcome to GIUSTI.AI
         </h1>
@@ -41,53 +40,14 @@ const Index = () => {
           powered by advanced AI technology.
         </p>
 
-        {/* Demo Chat Interface */}
-        <Card className="max-w-2xl mx-auto p-6 bg-white/95 backdrop-blur-sm mb-12">
-          <div className="space-y-4">
-            <p className="text-sm text-gray-600 mb-4">Try asking about:</p>
-            <div className="flex flex-wrap gap-2 justify-center mb-6">
-              <Button variant="outline" size="sm" className="text-blue-700 border-blue-300">
-                Employment Rights
-              </Button>
-              <Button variant="outline" size="sm" className="text-blue-700 border-blue-300">
-                Property Law
-              </Button>
-              <Button variant="outline" size="sm" className="text-blue-700 border-blue-300">
-                Contract Law
-              </Button>
-              <Button variant="outline" size="sm" className="text-blue-700 border-blue-300">
-                Family Law
-              </Button>
-            </div>
-
-            <div className="bg-blue-50 p-4 rounded-lg text-left mb-4">
-              <div className="flex items-start space-x-2">
-                <div className="text-blue-600 font-semibold text-sm">You:</div>
-                <div className="text-gray-700 text-sm">hi</div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-4 rounded-lg text-left mb-4">
-              <div className="flex items-start space-x-2">
-                <div className="text-gray-600 font-semibold text-sm">AI:</div>
-                <div className="text-gray-700 text-sm">
-                  Hello! As an AI Judiciary System, I'm here to provide you with accurate and
-                  informative legal analysis, guidance, and interpretations based on the principles of law.
-                  Please feel free to ask me any questions or provide me with the context of your query,
-                  so I can assist you in a concise, clear, and professional manner.
-                </div>
-              </div>
-            </div>
-
-            <div className="flex space-x-2">
-              <Input placeholder="Ask a legal question..." className="flex-1" />
-              <Button className="bg-blue-600 hover:bg-blue-700">Send</Button>
-            </div>
-          </div>
-        </Card>
+        <Link to="/login">
+          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-3">
+            Start Legal Consultation
+          </Button>
+        </Link>
 
         {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-8 mt-20">
           <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20 text-white">
             <MessageCircle className="h-12 w-12 text-blue-200 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Instant Legal Guidance</h3>
